@@ -1,1 +1,5 @@
 site_name: Шукалович Екатерина
+
+nav: 
+    - Home: index.md
+    - About: about.md
