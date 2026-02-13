@@ -1,8 +1,8 @@
-# Добро пожаловать на сайт!
+# Шукалович Екатерина
 
 For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 
-## Обо мне
+## Добро пожаловать на сайт!
 
 * `mkdocs new [dir-name]` - Create a new project.
 * `mkdocs serve` - Start the live-reloading docs server.
