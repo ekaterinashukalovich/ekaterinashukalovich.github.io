@@ -1,5 +1,6 @@
-## Who am I
+## Who I Am
 
-Student ....
+I'm .....
+
 
 ### ITMO University
