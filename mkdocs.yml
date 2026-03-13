@@ -1,0 +1,64 @@
+site_name: Екатерина Шукалович
+site_description: Портфолио разработчика | Python | Проекты | Лабораторные работы
+site_author: Екатерина Шукалович
+site_url: https://shukalovichekaterina.github.io
+repo_url: https://github.com/shukalovichekaterina/ekaterinashukalovich.github.io
+repo_name: shukalovichekaterina/ekaterinashukalovich.github.io
+
+docs_dir: source/docs        
+site_dir: docs 
+
+# Тема Material
+theme:
+  name: material
+  language: ru
+  favicon: assets/images/favicon.ico
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Тёмная тема
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Светлая тема
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - content.code.copy
+
+# Навигация (3 главных раздела)
+nav:
+  - Главная: index.md
+  - Обо мне: about.md
+  - Проекты: projects/index.md
+  - Лабораторные работы:
+    - Обзор: labs/index.md 
+    - Лаба №2: labs/lab2/lab2.md
+
+# Плагины
+plugins:
+  - search
+
+# Расширения Markdown
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.details
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - footnotes
+
+  # Отчеты
+extra_css:
+  - assets/css/extra.css

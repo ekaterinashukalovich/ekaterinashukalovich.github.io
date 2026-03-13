@@ -1,17 +1,41 @@
-# Сайт-портфолио Шукалович Екатерины
+# Привет! Меня зовут Екатерина 👋
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+Я студентка и начинающий Python-разработчик.
 
-## Commands
+---
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+## 🎯 Обо мне
 
-## Project layout
+Изучаю программирование на Python, создаю веб-приложения и автоматизирую процессы. 
+Люблю решать интересные задачи и учиться новому.
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+---
+
+## 🚀 Быстрые ссылки
+
+<div class="grid cards" markdown>
+
+-   :material-account:{ .lg .middle } __Обо мне__
+    — Моя история, навыки и образование
+
+    [:octicons-arrow-right-24: Подробнее](about.md)
+
+-   :material-briefcase:{ .lg .middle } __Проекты__
+    — Мои личные и учебные проекты
+
+    [:octicons-arrow-right-24: Смотреть](projects/index.md)
+
+-   :material-language-python:{ .lg .middle } __Лабораторные__
+    — Работы по курсу "Программирование на Python"
+
+    [:octicons-arrow-right-24: Открыть](labs/index.md)
+
+</div>
+
+---
+
+## 📬 Контакты
+
+- 📧 Email: your.email@example.com
+- 💼 GitHub: [@shukalovichekaterina](https://github.com/shukalovichekaterina)
+- 📍 Город: Москва
