@@ -37,8 +37,8 @@ jobs:
 
       - name: Build site
         run: |
-          cd source
-          mkdocs build -d ../docs
+          pip install -r requirements.txt
+          mkdocs build -d ./docs
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
