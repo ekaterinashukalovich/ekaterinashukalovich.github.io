@@ -1,63 +1,28 @@
 image: python:3.13
 
-cache:
-  paths:
-    - .pip/
-  key: "$CI_COMMIT_REF_SLUG"
-
-stages:
-  - build
-  - deploy
-
-install-dependencies:
+build:
   stage: build
   script:
-    - python -m pip install --upgrade pip
-    - pip install --cache-dir .pip -r requirements.txt
-  artifacts:
-    paths:
-      - .pip/
-  rules:
-    - if: $CI_COMMIT_BRANCH == "main"
-
-build-site:
-  stage: build
-  script:
-    # 🔍 ОТЛАДКА
-    - echo "========================================="
-    - echo "🔍 DEBUG: Текущая директория:"
-    - pwd
-    - echo "========================================="
-    - echo "🔍 DEBUG: Файлы в директории:"
+    - echo "=== START BUILD ==="
+    - echo "Current directory: $(pwd)"
+    - echo "Files:"
     - ls -la
-    - echo "========================================="
-    - echo "🔍 DEBUG: Ищем mkdocs.yml:"
-    - find . -maxdepth 2 -name "mkdocs*" -type f
-    - echo "========================================="
-    - echo "🔍 DEBUG: Проверка файла:"
-    - test -f mkdocs.yml && echo "✅ mkdocs.yml НАЙДЕН" || echo "❌ mkdocs.yml НЕ НАЙДЕН"
-    - echo "========================================="
-    
-    # 🔧 Сборка
+    - echo "Looking for mkdocs.yml:"
+    - find . -name "mkdocs*"
+    - pip install -r requirements.txt
     - mkdocs build -d ./public
-    
   artifacts:
     paths:
       - public/
-    expire_in: 1 week
   rules:
     - if: $CI_COMMIT_BRANCH == "main"
-  needs:
-    - install-dependencies
 
 pages:
   stage: deploy
   script:
-    - echo "🚀 Deploying to SourceCraft Pages..."
+    - echo "Deploying..."
   artifacts:
     paths:
       - public/
   rules:
     - if: $CI_COMMIT_BRANCH == "main"
-  needs:
-    - build-site
