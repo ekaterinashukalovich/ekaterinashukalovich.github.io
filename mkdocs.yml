@@ -1,12 +1,12 @@
 site_name: Екатерина Шукалович
 site_description: Портфолио разработчика | Python | Проекты | Лабораторные работы
 site_author: Екатерина Шукалович
-site_url: https://shukalovichekaterina.github.io
-repo_url: https://github.com/shukalovichekaterina/ekaterinashukalovich.github.io
-repo_name: shukalovichekaterina/ekaterinashukalovich.github.io
+site_url: https://ekaterinashukalovich.github.io/
+repo_url: https://github.com/ekaterinashukalovich/ekaterinashukalovich.github.io
+repo_name: ekaterinashukalovich/ekaterinashukalovich.github.io
 
-docs_dir: source/docs        
-site_dir: docs 
+docs_dir: source/docs        # исходные файлы
+site_dir: site               # готовый сайт в отдельную папку
 
 # Тема Material
 theme:
@@ -33,7 +33,7 @@ theme:
     - search.suggest
     - content.code.copy
 
-# Навигация (3 главных раздела)
+# Навигация
 nav:
   - Главная: index.md
   - Обо мне: about.md
@@ -59,6 +59,6 @@ markdown_extensions:
   - tables
   - footnotes
 
-  # Отчеты
+# Стили
 extra_css:
   - assets/css/extra.css
