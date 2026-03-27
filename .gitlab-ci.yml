@@ -27,7 +27,15 @@ install-dependencies:
 build-site:
   stage: build
   script:
-    - mkdocs build -f mkdocs.yml -d ./public
+    # 🔍 ОТЛАДКА: смотрим, где мы и что есть
+    - echo "=== Текущая директория ==="
+    - pwd
+    - echo "=== Файлы в текущей директории ==="
+    - ls -la
+    - echo "=== Ищем mkdocs.yml ==="
+    - find . -name "mkdocs*" -type f
+    # 🔧 Сборка
+    - mkdocs build -d ./public
   artifacts:
     paths:
       - public/
