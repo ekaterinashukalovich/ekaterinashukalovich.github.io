@@ -37,7 +37,10 @@ jobs:
 
       - name: Build site
         run: |
+<<<<<<< HEAD
           pip install -r requirements.txt
+=======
+>>>>>>> f1af369cbb819585ea3491c99adc209673cbaf95
           mkdocs build -d ./docs
 
       - name: Upload artifact
