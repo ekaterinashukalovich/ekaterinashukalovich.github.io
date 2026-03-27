@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой сайт на SourceCraft</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            padding: 40px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        h1 {
+            color: #4a5568;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .subtitle {
+            color: #718096;
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        
+        .content {
+            margin-bottom: 40px;
+        }
+        
+        .feature-list {
+            list-style: none;
+            margin: 20px 0;
+        }
+        
+        .feature-list li {
+            padding: 15px;
+            margin-bottom: 10px;
+            background: #f7fafc;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+            display: flex;
+            align-items: center;
+        }
+        
+        .feature-list li::before {
+            content: "✓";
+            color: #48bb78;
+            font-weight: bold;
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .status-card {
+            background: #ebf8ff;
+            border: 2px solid #4299e1;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .status-card.success {
+            background: #f0fff4;
+            border-color: #48bb78;
+        }
+        
+        .status-card h3 {
+            color: #2d3748;
+            margin-bottom: 10px;
+        }
+        
+        .url-display {
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: monospace;
+            margin: 15px 0;
+            word-break: break-all;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #e2e8f0;
+            color: #718096;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚀 Мой сайт на SourceCraft</h1>
+            <p class="subtitle">Статический хостинг с автоматическим развертыванием</p>
+        </header>
+        
+        <div class="content">
+            <div class="status-card success">
+                <h3>✅ Сайт успешно развернут!</h3>
+                <p>Ваш сайт работает на SourceCraft Sites</p>
+            </div>
+            
+            <p>Это демонстрационная страница, подтверждающая, что ваш сайт успешно развернут через SourceCraft Sites. Вы можете заменить этот контент на свой.</p>
+            
+            <h2>📋 Что уже настроено:</h2>
+            <ul class="feature-list">
+                <li>SourceCraft Sites конфигурация в <code>.sourcecraft/sites.yaml</code></li>
+                <li>Автоматическое развертывание из ветки <code>main</code></li>
+                <li>HTTPS защищенное соединение</li>
+                <li>Бесплатный хостинг статического контента</li>
+                <li>Автоматическое обновление при изменениях в репозитории</li>
+            </ul>
+            
+            <h2>🔗 Адрес вашего сайта:</h2>
+            <div class="url-display">
+                https://katerineshukalovich.sourcecraft.site/bykaterine
+            </div>
+            
+            <h2>🚀 Следующие шаги:</h2>
+            <ul class="feature-list">
+                <li>Замените этот контент на свой</li>
+                <li>Добавьте CSS стили в папку <code>site/css/</code></li>
+                <li>Добавьте JavaScript в папку <code>site/js/</code></li>
+                <li>Загрузите изображения в папку <code>site/img/</code></li>
+                <li>Настройте кастомный домен (опционально)</li>
+            </ul>
+        </div>
+        
+        <div style="text-align: center; margin: 30px 0;">
+            <a href="https://sourcecraft.dev" class="btn" target="_blank">Посетить SourceCraft</a>
+            <a href="https://sourcecraft.dev/portal/docs/ru/sourcecraft/concepts/sites" class="btn" target="_blank">Документация Sites</a>
+        </div>
+        
+        <footer>
+            <p>Развернуто с помощью ❤️ на <strong>SourceCraft Sites</strong></p>
+            <p>Обновлено автоматически при изменении репозитория</p>
+        </footer>
+    </div>
+    
+    <script>
+        // Простой скрипт для отображения времени последнего обновления
+        document.addEventListener('DOMContentLoaded', function() {
+            const updateTime = new Date().toLocaleString('ru-RU');
+            const timeElement = document.createElement('p');
+            timeElement.innerHTML = `Страница загружена: <strong>${updateTime}</strong>`;
+            timeElement.style.textAlign = 'center';
+            timeElement.style.marginTop = '20px';
+            timeElement.style.color = '#718096';
+            document.querySelector('footer').appendChild(timeElement);
+        });
+    </script>
+</body>
+</html>
