@@ -23,15 +23,23 @@ install-dependencies:
 build-site:
   stage: build
   script:
-    # 🔧 Явно переходим в корень проекта (переменная GitLab CI)
-    - cd $CI_PROJECT_DIR
+    # 🔍 ОТЛАДКА
+    - echo "========================================="
+    - echo "🔍 DEBUG: Текущая директория:"
+    - pwd
+    - echo "========================================="
+    - echo "🔍 DEBUG: Файлы в директории:"
+    - ls -la
+    - echo "========================================="
+    - echo "🔍 DEBUG: Ищем mkdocs.yml:"
+    - find . -maxdepth 2 -name "mkdocs*" -type f
+    - echo "========================================="
+    - echo "🔍 DEBUG: Проверка файла:"
+    - test -f mkdocs.yml && echo "✅ mkdocs.yml НАЙДЕН" || echo "❌ mkdocs.yml НЕ НАЙДЕН"
+    - echo "========================================="
     
-    # 🔍 Отладка (можно убрать позже)
-    - echo "🔍 DEBUG: pwd = $(pwd)"
-    - ls -la mkdocs.yml  # покажет, видит ли файл
-    
-    # 🔧 Сборка с явным указанием пути к конфигу
-    - mkdocs build -f $CI_PROJECT_DIR/mkdocs.yml -d $CI_PROJECT_DIR/public
+    # 🔧 Сборка
+    - mkdocs build -d ./public
     
   artifacts:
     paths:
@@ -40,15 +48,6 @@ build-site:
   rules:
     - if: $CI_COMMIT_BRANCH == "main"
   needs:
-    - install-dependencies
-    
-artifacts:
-    paths:
-      - public/
-    expire_in: 1 week
-rules:
-    - if: $CI_COMMIT_BRANCH == "main"
-needs:
     - install-dependencies
 
 pages:
