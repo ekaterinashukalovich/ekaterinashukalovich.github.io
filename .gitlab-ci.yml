@@ -1,7 +1,5 @@
-# .gitlab-ci.yml — конфигурация для SourceCraft (GitLab CI)
 image: python:3.13
 
-# Кэширование pip-зависимостей для ускорения сборок
 cache:
   paths:
     - .pip/
@@ -11,7 +9,6 @@ stages:
   - build
   - deploy
 
-# Установка зависимостей (отдельный шаг для кэширования)
 install-dependencies:
   stage: build
   script:
@@ -23,19 +20,22 @@ install-dependencies:
   rules:
     - if: $CI_COMMIT_BRANCH == "main"
 
-# Сборка сайта MkDocs
 build-site:
   stage: build
   script:
-    # 🔍 ОТЛАДКА: смотрим, где мы и что есть
-    - echo "=== Текущая директория ==="
+    # 🔍 ОТЛАДКА — не удаляйте эти строки!
+    - echo "🔍 DEBUG: Текущая директория:"
     - pwd
-    - echo "=== Файлы в текущей директории ==="
+    - echo "🔍 DEBUG: Файлы в директории:"
     - ls -la
-    - echo "=== Ищем mkdocs.yml ==="
-    - find . -name "mkdocs*" -type f
-    # 🔧 Сборка
+    - echo "🔍 DEBUG: Ищем mkdocs.yml:"
+    - find . -maxdepth 2 -name "mkdocs*" -type f
+    - echo "🔍 DEBUG: Проверка файла:"
+    - test -f mkdocs.yml && echo "✅ mkdocs.yml НАЙДЕН" || echo "❌ mkdocs.yml НЕ НАЙДЕН"
+    
+    # 🔧 Сборка (если файл найден)
     - mkdocs build -d ./public
+    
   artifacts:
     paths:
       - public/
@@ -45,12 +45,10 @@ build-site:
   needs:
     - install-dependencies
 
-# Публикация на SourceCraft Pages
 pages:
   stage: deploy
   script:
     - echo "🚀 Deploying to SourceCraft Pages..."
-    - ls -la public/  # для отладки
   artifacts:
     paths:
       - public/
