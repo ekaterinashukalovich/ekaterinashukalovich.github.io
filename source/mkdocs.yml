@@ -1,0 +1,60 @@
+site_name: Екатерина Шукалович
+site_description: Портфолио разработчика | Python | Проекты
+site_author: Екатерина Шукалович
+site_url: https://ekaterinashukalovich.github.io/
+repo_url: https://github.com/ekaterinashukalovich/ekaterinashukalovich.github.io
+repo_name: ekaterinashukalovich/ekaterinashukalovich.github.io
+
+docs_dir: docs
+site_dir: site         # готовый сайт в отдельную папку
+
+# Тема Material
+theme:
+  name: material
+  language: ru
+  favicon: assets/images/favicon.ico
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Тёмная тема
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Светлая тема
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - content.code.copy
+
+# Навигация
+nav:
+  - Главная: index.md
+  - Обо мне: about.md
+  - Проекты: projects/index.md
+
+# Плагины
+plugins:
+  - search
+
+# Расширения Markdown
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.details
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - footnotes
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
