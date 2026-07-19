@@ -1,13 +1,14 @@
-# Привет! Меня зовут Екатерина 👋
+# Екатерина Шукалович — Портфолио разработчика 
 
-Я студентка и начинающий Python-разработчик.
+
 
 ---
 
 ## 🎯 Обо мне
 
-Изучаю программирование на Python, создаю веб-приложения и автоматизирую процессы. 
-Люблю решать интересные задачи и учиться новому.
+Студентка университета ИТМО 2 курса специальности "Нейротехнологии и программирование".
+Развиваюсь в сфере веб-разработки, аналитики и машинного обучения.
+#### Открыта к сотрудничеству в проектах!
 
 ---
 
@@ -25,10 +26,6 @@
 
     [:octicons-arrow-right-24: Смотреть](projects/index.md)
 
--   :material-language-python:{ .lg .middle } __Лабораторные__
-    — Работы по курсу "Программирование на Python"
-
-    [:octicons-arrow-right-24: Открыть](labs/index.md)
 
 </div>
 
@@ -36,6 +33,6 @@
 
 ## 📬 Контакты
 
-- 📧 Email: your.email@example.com
-- 💼 GitHub: [@shukalovichekaterina](https://github.com/shukalovichekaterina)
-- 📍 Город: Москва
+- 📧 Email: shukalovich.ekaterina@gmail.com
+- 💼 GitHub: [ekaterinashukalovich](https://github.com/ekaterinashukalovich)
+- 📍 Город: Санкт-Петербург

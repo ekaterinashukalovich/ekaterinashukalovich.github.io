@@ -18,8 +18,8 @@
 
 - **Языки:** Python, JavaScript, Java
 - **Фреймворки:** Django, Flask, FastAPI
-- **Инструменты:** Git, Docker
-- **Базы данных:** PostgreSQL, NoSQL
+- **Инструменты:** Git, Docker, pandas, numpy
+- **Базы данных:** PostgreSQL, MySQL
 
 ---
 
