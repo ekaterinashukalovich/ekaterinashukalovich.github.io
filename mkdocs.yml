@@ -38,9 +38,6 @@ nav:
   - Главная: index.md
   - Обо мне: about.md
   - Проекты: projects/index.md
-  - Лабораторные работы:
-    - Обзор: labs/index.md 
-    - Лаба №2: labs/lab2/lab2.md
 
 # Плагины
 plugins:
@@ -48,13 +45,15 @@ plugins:
 
 # Расширения Markdown
 markdown_extensions:
-  - pymdownx.highlight
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - attr_list
   - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.details
   - admonition
-  - attr_list
   - md_in_html
   - tables
   - footnotes
